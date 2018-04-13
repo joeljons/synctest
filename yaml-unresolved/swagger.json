@@ -1,0 +1,37 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: VirtServer array example
+
+paths:
+  /:
+    get:
+      produces:
+        - application/json
+      responses:
+        200:
+          description: completed successfully
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/User'
+            example:
+              - id: 1
+                name: Arthur Dent
+              - id: 2
+                name: Ford Prefect
+definitions:
+  User:
+    type: object
+    properties:
+      id:
+        type: integer
+        example: 0
+      name:
+        type: string
+        example: Marvin
+# Added by API Auto Mocking Plugin
+host: dev-virtserver.swaggerhub.com
+basePath: /joeljons/SHUB-5069/1.0
+schemes:
+ - https
